@@ -1,0 +1,38 @@
+{% load static %}
+<style>
+  .logo{
+    position: relative;
+    top: 2.5px;
+    right: 7px;
+    float: right;
+  }
+</style>
+<!-- Navbar -->
+<nav  class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <a href="http://127.0.0.1:8000/">
+      <img src="{% static 'maktabtak.png'%}" alt="site logo" class="logo" width="60px" >
+    </a>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="http://127.0.0.1:8000/" class="nav-link">Maktabtak</a>
+      </li>
+
+    </ul>
+
+    <!-- SEARCH FORM -->
+    <form method="GET" action="{% url 'books' %}" class="form-inline ml-3"> <!-- الميثود بتبقا get -->
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" name="search_name" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </nav>
+  <!-- /.navbar -->
